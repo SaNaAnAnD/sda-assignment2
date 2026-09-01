@@ -1,0 +1,57 @@
+{
+  "seed": 65046,
+  "reference_date": "2026-08-31",
+  "kafka": {
+    "bootstrap_servers": "localhost:9092",
+    "topics": {
+      "transactions": {
+        "partitions": 3,
+        "key": "customer_id"
+      },
+      "user_sessions": {
+        "partitions": 3,
+        "key": "customer_id"
+      },
+      "gateway_status": {
+        "partitions": 3,
+        "key": "bank_id"
+      },
+      "merchant_ref": {
+        "partitions": 1,
+        "key": "merchant_id"
+      },
+      "customer_persona": {
+        "partitions": 1,
+        "key": "customer_id"
+      }
+    }
+  },
+  "rates": {
+    "transactions_per_min": 3000,
+    "sessions_per_min": 1200,
+    "gateway_events_per_min": 3000
+  },
+  "fraud_injection": {
+    "rate": 0.015,
+    "sigma_multiplier_range": [
+      3.5,
+      8.0
+    ],
+    "unseen_device_probability": 0.85,
+    "geo_mismatch_probability": 0.6,
+    "high_risk_merchant_bias": 0.7
+  },
+  "gateway_degradation": {
+    "target_bank": "ACQ_AXIS",
+    "start_offset_sec": 180,
+    "duration_sec": 240,
+    "degraded_success_rate": 0.71,
+    "degraded_latency_ms": 1450
+  },
+  "counts": {
+    "customers": 5000,
+    "merchants": 5000,
+    "devices": 7907,
+    "banks": 5
+  }
+}

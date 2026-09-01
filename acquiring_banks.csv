@@ -1,0 +1,6 @@
+bank_id,bank_name,routing_weight,baseline_success_rate,baseline_latency_ms,latency_sd_ms
+ACQ_HDFC,HDFC Bank,0.28,0.978,210,55
+ACQ_ICICI,ICICI Bank,0.24,0.971,245,62
+ACQ_AXIS,Axis Bank,0.2,0.965,280,70
+ACQ_SBI,State Bank of India,0.18,0.952,340,95
+ACQ_YES,Yes Bank,0.1,0.944,310,88
